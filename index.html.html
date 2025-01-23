@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Email Generator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Letter Generator</h1>
+        <p>Choose a reason and generate your Letter, which you can edit and send.</p>
+
+        <!-- Form to enter the reason -->
+        <form id="reasonForm">
+            <label for="reason" >Select Letter Reason:</label>
+            <select id="reason" required>
+
+                <option value="" >--Select Reason--</option>
+
+                <option value="leave">Request for Leave</option>
+                <option value="appointment">Request for Appointment</option>
+                <option value="complaint">Complaint Regarding Service</option>
+                <option value="feedback">Feedback on Product</option>
+            </select>
+            <button type="submit">Generate Email</button>
+        </form>
+
+        <!-- Display the generated email -->
+        <div id="generatedEmail" class="hidden">
+            <h2>Generated Email</h2>
+            <textarea id="emailContent" rows="10"></textarea>
+
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
